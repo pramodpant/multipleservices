@@ -1,0 +1,18 @@
+.example-card {
+  max-width: 300px;
+  margin: 4px;
+}
+  .example-header-image {
+    background-image: url('../../../assets/images/allphones.img');
+    background-size: cover;
+  }
+  mat-grid-tile {
+    background: lightblue;
+ }
+
+ .center {
+  display: flex;
+  height: 100%;
+  background-color:whitesmoke;
+  justify-content: center;
+}

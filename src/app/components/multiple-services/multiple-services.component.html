@@ -1,0 +1,25 @@
+
+<div *ngFor="let product of productResponse"> 
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{product.productName}}</mat-card-title>
+            <mat-card-subtitle>{{product.companyName}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/images/{{product.productId}}.img" alt="{{product.productId}}">
+          <mat-card-content fxFlex="65">
+            <p>
+              {{product.productDescription}}
+            </p>
+          </mat-card-content>
+          
+          <mat-card-actions>
+            <!-- <button mat-raised-button color="primary" (click)="getReviews(product.productId)">See Reviews</button> -->
+            <a [routerLink]="['/reviews/',product.productId]">See Details</a>
+
+          </mat-card-actions>
+          <mat-divider class="mat-divider"></mat-divider>
+        </mat-card>
+</div>
+<br>
+<router-outlet></router-outlet>
